@@ -30,8 +30,19 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
+    function reveal_gallery() {
+        $("#gallery").children().each(function() {
+            this.src = $(this).data("src");
+        });
+    };
+
     $(function() {
-            // RUN ON PAGE LOAD
+        // RUN ON PAGE LOAD
+        $('#gallery').children().each(function() {
+            $(this).data("src", this.src);
+            this.src = "";
+            });
+
         $('#gallery').hide();
         $('#robots').hide();
         $('#data').hide();
@@ -136,7 +147,7 @@
 
     <hr/>
 
-    <h3 onclick="$('#gallery').slideToggle('fast');">Gallery</h3>
+    <h3 onclick="$('#gallery').slideToggle('fast'); reveal_gallery();">Gallery</h3>
 
     <div id="gallery">
 
