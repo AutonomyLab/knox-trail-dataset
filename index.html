@@ -32,6 +32,8 @@
 <script type="text/javascript">
     $(function() {
             // RUN ON PAGE LOAD
+        $('#robots').hide();
+        $('#data').hide();
     });
 </script>
 
@@ -91,12 +93,13 @@
     <p>The Knox Trail Dataset consists of approximately 50 GB of sensor data
     recorded on three heterogeneous robots with different sensor packages at
     Knox Mountain Park, British Columbia, Canada.  All three robots traversed
-    the 4km trail at the same time, and thus sometimes appear in each other
-    robot's sensors. Sensors include cameras, single- and multi-beam scanning
-    laser rangefinders, GPS, inertial measurements and wheel encoders. Sensor
-    calibration is only approximate, reflecting long-term situations where robots
-    must be robust to imperfect and changing sensor parameters. We provide the
-    data in the form of ROS bag files, JPEG image files, and CSV text files.</p>
+    the 4km trail at the same time, and sometimes appear in the other robots'
+    sensors. Sensors include cameras, single- and multi-beam scanning laser
+    rangefinders, GPS, inertial measurements and wheel encoders. Sensor
+    calibration is deliberately approximate, reflecting long-term situations
+    where robots must be robust to imperfect and changing sensor parameters. We
+    provide the data in the form of ROS bag files, JPEG image files, and CSV
+    text files.</p>
 
     <div style="margin-left: 0%; margin-right: 0%; width: 100%">
         <figure style="float: left; width: 30%; margin-right: 0%; margin-left: 3%; margin-bottom: 0.5em; text-align: center">
@@ -104,7 +107,7 @@
             <img src="mcgill-husky.jpeg" alt="McGill Husky" style="width: 90%"/>
             </a>
             <figcaption style="font-size: 12px">
-            McGill University Husky robot with Velodyne VLP-16 "Puck" and monocular 
+            McGill University Husky robot with Velodyne VLP-16 "Puck" and
             rolling shutter color camera.
             </figcaption>
         </figure>
@@ -115,8 +118,8 @@
             </a>
             <figcaption style="font-size: 12px">
             Simon Fraser University Husky robot with SICK planar laser scanners,
-            2 global shutter color cameras in stereo, 4 global shutter monochrome 
-            monocular cameras, and barometric pressure sensor.
+            color/grayscale stereo/monocular global shutter cameras,
+            and barometric pressure sensor.
             </figcaption>
         </figure>
 
@@ -126,7 +129,7 @@
             </a>
             <figcaption style="font-size: 12px">
             McGill University robotic wheelchair with SICK planar laser scanners 
-            and monocular rolling shutter Kinect camera.
+            and rolling shutter color camera.
             </figcaption>
         </figure>
         <p style="clear: both;"></p>
@@ -140,6 +143,17 @@
     <div id="robots">
 
         <!-- TODO: Describe robots here -->
+
+    </div>
+
+    <hr/>
+
+
+    <h3 onclick="$('#data').slideToggle('fast');">Data</h3>
+
+    <div id="data">
+
+        <!-- TODO: link to data here -->
 
     </div>
 
