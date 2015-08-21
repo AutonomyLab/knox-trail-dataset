@@ -31,14 +31,14 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
     function reveal_gallery() {
-        $("#gallery").children().each(function() {
+        $("#gallery img").each(function() {
             this.src = $(this).data("src");
         });
     };
 
     $(function() {
         // RUN ON PAGE LOAD
-        $('#gallery').children().each(function() {
+        $('#gallery img').each(function() {
             $(this).data("src", this.src);
             this.src = "";
             });
